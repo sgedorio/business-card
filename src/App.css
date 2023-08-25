@@ -1,38 +1,158 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 24px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.card--header {
+  width: 320px;
+  height: 320px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card--header > img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px 10px 0 0;
 }
+
+.card--body {
+  background: #F5F5F5;
+  width: 320px;
+
+  /* ensures padding doesn't increase width over 320px */
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box; 
+
+  padding: 20px 35px 30px;
+}
+
+.card--body > h1 {
+  color: #2B283A;
+  text-align: center;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.card--body > h3 {
+  color: #F47D27;
+  text-align: center;
+  font-size: 12.8px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 8px 0;
+}
+
+.website, p {
+  text-decoration: none;
+  display: block;
+  color: #4A4E74;
+  font-size: 10.24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 15.36px */
+}
+
+.website {
+  text-align: center;
+  height: 16px;
+  margin-bottom: 16px;
+}
+
+.website:hover {
+  text-decoration: underline;
+}
+
+.contact--main {
+  display: flex;
+  flex-direction: row;
+}
+
+.contact--main a {
+  text-decoration: none;
+}
+
+/* sets layout & width of main contact buttons */
+.email, .linkedin {
+  width: 115px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 9px 0px;
+
+  border-radius: 6px;
+}
+
+/* sets color & border of main contact buttons */
+.email {
+  background: var(--white, #FFF);
+  border: 1px solid var(--gray-300, #D1D5DB);
+  margin-right: 16px;
+}
+
+.linkedin {
+  background: #297FE5;
+}
+
+
+.email > img, .linkedin > img {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.email > span, .linkedin > span {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.email > span {
+  color: var(--gray-700, #374151);
+}
+
+.linkedin > span {
+  color: #FFF;
+}
+
+h2 {
+  color: #2B283A;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 24px */
+
+  margin: 24px 0 0 0;
+}
+
+p {
+  margin: 4px 0 0 0;
+}
+
+.card--footer {
+  width: 320px;
+  height: 64px;
+  border-radius: 0 0 10px 10px;
+  background: #D5D4D8;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.card--footer > a > img {
+  width: 25px;
+  height: 25px;
+  margin: 12px;
+}
+
